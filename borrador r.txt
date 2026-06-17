@@ -1,0 +1,122 @@
+//---ETAPA 1---
+PROFESIONAL
+    unversodad (se asigna x profesional)
+    honorarios (depende por profesional) esta mal que se acuerde el honorario. preguntar a universidad
+    provinciasQuePuedeTrabajar (depende por profesional) esta mal que se auerde la rovincia, pregunar universidad
+
+    PROFESIONALES VINCULADOS A UNA UNIVERSIDAD  
+    solo trabajan en universidad.provinciasQuePuedeTrabajar
+    los honorarios los recomienda la universidad
+    
+    PROFESIONALES ASOIADOS DEL LITORAL
+        pueden trabajar en entre rios, santa fe y corrientes 
+        honorarios = 3000
+
+UNIVERSIDAD 
+    provincia
+    honorariosRecomendados
+
+    la universidad esta en una provincia pero el profesional tiene que devovler coleccion de provincias.
+    profesional vinculado coleccion con 1 elem
+
+EMPRESA DE SERVICIOS
+    contrata varios profesionales = []
+    para cada uno, se indica un hnorario de referencia
+
+    obtener para la pempresa:
+        cuantos profesionales contratados estudio en determinada universidad. pasar universidad por parametro?
+        profesionales caros: su honorario es mayor al honorario de referencia d la EMPRESA
+        universidadesFormadoras: univerisdades donde estudiaron sus profesionales contratads sin repetidos
+        el profesional mas barato: sus honorarios son los mas bajos
+        esDeGenteAcotada = ningun profesional esta mas habiltado par mas de tres provincias o ningun profesional de la empresa trabaja en mas de 3 privincias 
+
+
+//---TEST ETAPA 1---
+
+universidad de san martin esa en la prov de bsas, honorarios son 3500 PROFESIONALES
+rosario esta en santa fe hnorarios 2800 
+corrientes en corrientes honorarios son 4200 
+hurlingham esta en buenos aires, honrarios recomendados son de 8800
+
+profesionales:
+juana, vinculada estudio en rosario
+melina, asociaa del litoral. estudio en corrientes
+rocio libre. estudio en hurlingham, honorarios 5000 puede trabajar en santa fe, cordoba, y buenos aires
+luciana libre, estudio en rosario, honorarios de 3200. puede trabajar en santafe y entre rios
+
+empresa:
+    que contrate estos 4 profesionales y cuyos honorarios de referencia son 3500 pesos debe tener
+        2 de sus profesionales estudiaro en rosariouno en hurlingam,uno en san martin
+        profesionales caros solo rocio. el metodo devuelve una coleccion con un solo elemento, rocio
+        univerisdades formadoras rosario, corrientes, y hurlingham
+        profesional mas barato, juana
+        
+        empresa de gente acotada. pero si luciana recibe 2 provincias mas 
+
+//---ETAPA 2---
+
+SOLICITANTES
+
+    puedeSerAtendidoPor(unProfesional)
+
+    PERSONA 
+        procincia que vive
+        puede ser atendido por profesionales que pueden trabajar en la provincia que vive
+
+    INSTITUCION
+        universidadesQueReconoce= []
+        puede er atendida por los profesionales que estudiaron en universidades reconocidas
+
+    CLUB
+        puede estar en varias provincias
+        saber si es sede central o anexo
+        solo interesa saber en que provincia esta
+
+        puede ser atendido si al menos un profesional puede trabajar en alguna de las provincias donde esta el CLUB
+
+a una emprea se e tiene que poder preguntar si puede satisfacerAlSolicitante(unSolicitante)
+    el solicitnte puede ser atendido por al menos uno de los profesonales contrataros por la empresa
+
+//--3. ETAPA 3 --
+
+agregar profesional cobra importe de dinero
+el importe no esta relacioado con los honorarios
+cuando el proesional cobrarImporte(unImporte) depende el resultado del tipo de profesional
+
+    PROFESIONALES VINCULADOS
+        le donan la mitad a la universidad y la otra mitad la gastan, no queda regitro.
+        mantener el total recibido por donaiones de cada universidad
+
+        PROFESIONALES ASOCIADOS
+            le da todo lo que cobran a la asociacion del litoralagregar objeto asociacionDelLitoral {}
+            mantiene el total recaudado
+
+        PROFESIONALES LIBRES
+            se guardan todo lo que cobran
+            debe mantenerse el total recaudado por cada uno
+
+            un profesional libre le puede pasar una cantidad x a otro
+                se resta del total recaudado y lo cobra el otro profesional 
+                si ruben tiene 1000, nora tiene 12000
+                nora.pasarDinero(unProfesional= ruben, unImporte= 4000)
+                nora tiene 8000 y ruben 14000
+
+//--4. ETAPA 4. REGISTRO DE TRABAJOS HECHOS--
+
+agregar registro de cada trabajo que una empresa de servicios hace para un solicitante 
+agregarle a la clase empresa el method darServicio()
+laMejor.darServicio(unSolicitante= mirna)
+se le da a mirn un servicio
+ cada servicio es una ora de tiempo del profesional
+ si el solicitante puede ser antendido, elejir un solicitante cualquiera de los profesionales para atenderlo
+ ahcer que ese profesional cobre su nonorario por honrarios
+ y agregar al solicitante al conjunto clientes = [] de la empresa
+
+preguntarle a la empresa de servicios cuantos clientes tiene y si tiene o no como cliente a un determinado cluente
+
+//--DESAFIO FINAL--
+
+preguntarle a una empresa si un profesional es poco atractivo para la empresa (unProfesional)
+si para cada provincia en la que puede trabajar el profesioal, la empresa cuenta con otro profesional que puede trabajar para esa provincia y es mas barato que unProfesional
+
+
