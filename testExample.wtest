@@ -1,4 +1,6 @@
-import example.pepita
+import example.*
+
+const sanMartin = new Universidad(provincia = "bsas", honorariosRecomendados= 3500)
 
 describe "group of tests for pepita" {
 

@@ -5,12 +5,16 @@ PROFESIONAL
     provinciasQuePuedeTrabajar (depende por profesional) esta mal que se auerde la rovincia, pregunar universidad
 
     PROFESIONALES VINCULADOS A UNA UNIVERSIDAD  
-    solo trabajan en universidad.provinciasQuePuedeTrabajar
+    solo trabajan en universidad.provincia
     los honorarios los recomienda la universidad
     
     PROFESIONALES ASOIADOS DEL LITORAL
         pueden trabajar en entre rios, santa fe y corrientes 
         honorarios = 3000
+
+    PROFESIONAL LIBRE
+        se indica par cada uno en que provincia pude trabajar
+        se indica para c u los horarios por hora
 
 UNIVERSIDAD 
     provincia
@@ -33,7 +37,7 @@ EMPRESA DE SERVICIOS
 
 //---TEST ETAPA 1---
 
-universidad de san martin esa en la prov de bsas, honorarios son 3500 PROFESIONALES
+universidad de san martin esa en la prov de bsas, honorarios son 3500
 rosario esta en santa fe hnorarios 2800 
 corrientes en corrientes honorarios son 4200 
 hurlingham esta en buenos aires, honrarios recomendados son de 8800
